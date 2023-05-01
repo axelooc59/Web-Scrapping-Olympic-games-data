@@ -1,30 +1,25 @@
 # Web-Scrapping-Olympic-games-data
 
-For my job at ACSSI, we wanted to create a Qlik Sense app showing Olympic games data. Unfortunatelly, we  just have found data since 2016... 
-So I had the idea to scrap them from this website (official Olympic games website I think) : https://olympics.com/fr/olympic-games.
+### Topic: How I scraped data for the Tokyo 2020 Olympic Games?
 
-For that I used Python with mainly two librarys : requests_html and selenium.
+For my job at ACSSI, we wanted to create a Qlik Sense app showcasing Olympic games data. Unfortunately, we only had data since 2016. So, I had the idea to scrape the data from the official Olympic games website, https://olympics.com/fr/olympic-games, for which I used Python with mainly two libraries: requests_html and Selenium.
 
+I had two main cases to get all the data from every event. The first one could be handled more efficiently than the second one. The first case was the individual event, while the second one was the team event.
 
+The difference between these two cases is that in the second one, we had to extend every item of the list to generate the HTML source for athletes' names; otherwise, it wouldn't be in the source. I could not do that using requests_html, so I switched to Selenium to extend their items by clicking on them.
 
-I had two main cases, to get all the data from every event . 
+Before scraping, we obviously needed URLs. I figured out the pattern of their URLs and generated them. Eventually, I categorized them automatically based on team/individual events.
 
-The first one could be handle more efficiently than the second one.
-The first case was the individual event.The second one, team event.
+For the individual case event, the scraping process was as follows:
 
-
-The difference between this two cases is that in the second one we had to extend every item of the list to generate the html source for Athletes otherwise it won't be in source.I could not do that using resquests_html so I switch using Selenium in order to extend their items by clicking on them.
-
-Before scrapping, we obviously need urls. I figure it out the pattern of theirs urls and generated them. Eventually I categorize them automatically in function of Team/Individual event.
-
-For the indivdual case event the scrapping process was this one :
 * Request the current link
-* parse html source using BeautifulSoup
-* search nodes of interest (name,country,result) and iterate them
-* calculate position in the event
-* adding each items in list
-* Convert list in csv file
+* Parse the HTML source using BeautifulSoup
+* Search nodes of interest (name, country, result) and iterate through them
+* Calculate the position in the event
+* Add each item to the lists
+* Convert the lists to a CSV file
 
+For the team case event, the difference was that I had to extend the items. For that, I used an automated browser called Selenium and clicked automatically on the items that needed to be extended to reveal the source of athletes' names. After all items were extended, the process was the same as above.
 
 
 

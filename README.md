@@ -1,6 +1,6 @@
 # Web-Scrapping-Olympic-games-data
 
-### Topic: How I scraped data for the Tokyo 2020 Olympic Games?
+### Topic: How I scpraped data for the Tokyo 2020 Olympic Games?
 
 For my job at ACSSI, we wanted to create a Qlik Sense app showcasing Olympic games data. Unfortunately, we only had data since 2016. So, I had the idea to scrape the data from the official Olympic games website, https://olympics.com/fr/olympic-games, for which I used Python with mainly two libraries: requests_html and Selenium.
 
@@ -21,6 +21,8 @@ For the individual case event, the scraping process was as follows:
 
 For the team case event, the difference was that I had to extend the items. For that, I used an automated browser called Selenium and clicked automatically on the items that needed to be extended to reveal the source of athletes' names. After all items were extended, the process was the same as above.
 
+
+Don't forget to leave a start if you liked my project !
 
 
 

@@ -22,6 +22,7 @@ For the individual case event, the scraping process was as follows:
 For the team case event, the difference was that I had to extend the items. For that, I used an automated browser called Selenium and clicked automatically on the items that needed to be extended to reveal the source of athletes' names. After all items were extended, the process was the same as above.
 
 
+You can see the result in dataInd2.csv and dataTeam2.csv
 Don't forget to leave a start if you liked my project !
 
 
